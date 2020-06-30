@@ -9,7 +9,7 @@ const NewsletterForm = () => {
     sendData,
     error: sendDataError,
     submitted: sendDataSubmitted,
-  } = useSendData("/.netlify/funcitons/subscribe");
+  } = useSendData("/.netlify/functions/subscribe");
   const {
     formState: { isSubmitting },
     handleSubmit,
