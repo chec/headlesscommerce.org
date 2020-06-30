@@ -8,7 +8,7 @@ const SubmitForm = ({ onClose }) => {
     sendData,
     error: sendDataError,
     submitted: sendDataSubmitted,
-  } = useSendData("/.netlify/funcitons/submit");
+  } = useSendData("/.netlify/functions/submit");
   const {
     formState: { isSubmitting },
     handleSubmit,
