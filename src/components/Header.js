@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 import { useNavigationDispatch } from "../context/NavigationContext";
 import Logo from "../svg/hc.svg";
+import Twitter from "../svg/twitter.svg";
 
 const Header = () => {
   const { toggleFilters } = useNavigationDispatch();
@@ -10,10 +12,19 @@ const Header = () => {
   return (
     <header className="bg-primary py-6 md:h-32">
       <div className="max-w-5xl px-3 md:px-6 mx-auto h-full md:flex">
-        <div className="w-full flex items-center justify-center md:justify-start relative">
+        <div className="w-full flex items-center justify-center md:justify-between relative">
           <div className="absolute right-0 flex items-center">
+            <OutboundLink
+              href="https://twitter.com/commerceheads"
+              className="text-white items-center hidden md:inline-flex text-sm"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <Twitter className="fill-current w-4 h-4 mr-3" /> Follow us on
+              Twitter
+            </OutboundLink>
             <button
-              className="md:hidden appearance-none outline-none outline-none focus:outline-none"
+              className="md:hidden appearance-none outline-none focus:outline-none"
               onClick={toggleFilters}
             >
               <svg
