@@ -25,7 +25,7 @@
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",
     "react-hook-form": "5.7.2",
-    "react-instantsearch-dom": "6.4.0"
+    "react-instantsearch-dom": "6.6.0"
   },
   "devDependencies": {
     "dotenv": "8.2.0",
