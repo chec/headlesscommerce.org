@@ -136,4 +136,10 @@ html {
 .ais-InfiniteHits-loadMore--disabled {
   @apply hidden;
 }
+
+.site-gradient {
+  background: #c04848;
+  background: -webkit-linear-gradient(0.45turn, #480048, #c04848);
+  background: linear-gradient(0.45turn, #480048, #c04848);
+}
 /* purgecss end ignore */
