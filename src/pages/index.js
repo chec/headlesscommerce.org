@@ -38,7 +38,7 @@ export default function IndexPage() {
               <SearchFilters />
             </aside>
 
-            <div className="w-full md:w-3/4 px-6 md:-mt-16">
+            <div className="w-full md:w-3/4 px-6 -mt-6 md:-mt-16">
               <div className="bg-white rounded overflow-hidden shadow mb-4">
                 <SearchSummary />
                 <InfiniteHits hitComponent={Hit} />

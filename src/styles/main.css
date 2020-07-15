@@ -137,9 +137,11 @@ html {
   @apply hidden;
 }
 
-.site-gradient {
-  background: #2c7ea1;
-  background: -webkit-linear-gradient(0.45turn, #480048, #2c7ea1);
-  background: linear-gradient(0.45turn, #480048, #2c7ea1);
+@responsive {
+  .bg-primary-gradient {
+    background: #2c7ea1;
+    background: -webkit-linear-gradient(0.45turn, #480048, #2c7ea1);
+    background: linear-gradient(0.45turn, #480048, #2c7ea1);
+  }
 }
 /* purgecss end ignore */

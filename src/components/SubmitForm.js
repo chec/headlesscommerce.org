@@ -18,7 +18,7 @@ const SubmitForm = () => {
   const onSubmit = async (values) => await sendData(values);
 
   return (
-    <div className="site-gradient w-full shadow rounded bg-white mb-4 p-6 md:p-12 relative">
+    <div className="bg-primary-gradient w-full shadow rounded bg-white mb-4 p-6 md:p-12 relative">
       <div className="flex items-center">
         <div className="w-full text-center">
           <div className="pb-6 md:pb-12">
