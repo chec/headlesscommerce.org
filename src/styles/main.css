@@ -99,7 +99,7 @@ html {
   @apply text-sm text-gray-600;
 }
 
-.ais-InfiniteHits .ais-InfiniteHits-item {
+.ais-InfiniteHits.list .ais-InfiniteHits-item {
   @apply h-full w-full flex;
 }
 
@@ -118,6 +118,14 @@ html {
 }
 
 @screen md {
+  .ais-InfiniteHits.grid .ais-InfiniteHits-list {
+    @apply flex flex-wrap items-center;
+  }
+
+  .ais-InfiniteHits.grid .ais-InfiniteHits-item {
+    @apply h-full w-1/2 flex;
+  }
+
   .ais-ClearRefinements-button {
     @apply mt-0;
   }
