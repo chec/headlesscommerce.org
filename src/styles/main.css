@@ -138,8 +138,8 @@ html {
 }
 
 .site-gradient {
-  background: #c04848;
-  background: -webkit-linear-gradient(0.45turn, #480048, #c04848);
-  background: linear-gradient(0.45turn, #480048, #c04848);
+  background: #2c7ea1;
+  background: -webkit-linear-gradient(0.45turn, #480048, #2c7ea1);
+  background: linear-gradient(0.45turn, #480048, #2c7ea1);
 }
 /* purgecss end ignore */
