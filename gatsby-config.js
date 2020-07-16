@@ -9,6 +9,8 @@ const siteMetadata = {
   keywords:
     "Headless Commerce, Commerce Resources, Headless eCommerce APIs, Commerce API",
   siteUrl: "https://headlesscommerce.org",
+  twitter: "https://twitter.com/commerceheads",
+  linkedIn: "https://www.linkedin.com/company/headlesscommerce/",
 };
 
 module.exports = {

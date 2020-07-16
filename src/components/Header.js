@@ -1,26 +1,49 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 import { useNavigationDispatch } from "../context/NavigationContext";
 import Logo from "../svg/hc.svg";
-import Twitter from "../svg/twitter.svg";
+import TwitterSVG from "../svg/twitter.svg";
+import LinkedInSVG from "../svg/linkedin.svg";
+
+const siteMetadataQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        twitter
+        linkedIn
+      }
+    }
+  }
+`;
 
 const Header = () => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(siteMetadataQuery);
   const { toggleFilters } = useNavigationDispatch();
 
   return (
-    <header className="bg-primary-gradient bg-primary py-6 pb-10 md:pt-12 md:pb-32">
+    <header className="bg-primary-gradient bg-primary py-6 pb-10 md:pt-12 md:pb-32 lg:pb-40">
       <div className="max-w-5xl px-3 md:px-6 mx-auto">
         <div className="w-full flex items-center justify-center md:justify-between relative">
-          <div className="absolute right-0 flex items-center">
+          <div className="absolute right-0 flex items-center -mr-3">
             <OutboundLink
-              href="https://twitter.com/commerceheads"
-              className="text-white items-center hidden md:inline-flex text-sm"
+              href={siteMetadata.linkedIn}
+              className="text-white items-center hidden md:inline-flex text-sm p-3"
               rel="nofollow noopener noreferrer"
               target="_blank"
             >
-              <Twitter className="fill-current w-6 h-6 mr-3" />
+              <LinkedInSVG className="fill-current w-6 h-6" />
+            </OutboundLink>
+            <OutboundLink
+              href={siteMetadata.twitter}
+              className="text-white items-center hidden md:inline-flex text-sm p-3"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <TwitterSVG className="fill-current w-6 h-6" />
             </OutboundLink>
             <button
               className="md:hidden appearance-none outline-none focus:outline-none"
@@ -43,7 +66,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="pt-6 mx-auto max-w-screen-xl px-4 sm:px-6 md:pt-24">
+      <div className="pt-6 mx-auto max-w-screen-xl px-4 sm:px-6 md:pt-32">
         <div className="text-center">
           <h2 className="text-2xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
             Headless Commerce Resources
