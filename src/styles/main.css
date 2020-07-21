@@ -50,7 +50,8 @@ html {
 }
 
 .ais-RefinementList-checkbox:focus,
-.ais-Menu-checkbox:focus {
+.ais-Menu-checkbox:focus,
+.ais-RefinementList-showMore:focus {
   @apply outline-none;
 }
 
@@ -109,8 +110,13 @@ html {
 }
 
 .ais-ClearRefinements-button,
-.ais-InfiniteHits-loadMore {
+.ais-InfiniteHits-loadMore,
+.ais-RefinementList-showMore {
   @apply bg-primary font-semibold uppercase text-xs tracking-wide text-white py-2 px-3 w-full appearance-none rounded;
+}
+
+.ais-RefinementList-showMore {
+  @apply bg-gray-600;
 }
 
 .ais-ClearRefinements-button {

@@ -31,6 +31,7 @@ export default function SearchFilter() {
             icon={<FilterIcon className="-ml-px w-6 h-5 fill-current mr-3" />}
             title="Filter"
             attribute="categories"
+            showMore
           />
 
           <CustomRefinementList
