@@ -1,7 +1,7 @@
 const fetch = require("isomorphic-fetch");
 
-exports.handler = async ({ body }) => {
-  const data = JSON.parse(body);
+module.exports = async (req, res) => {
+  const data = JSON.parse(req.body);
 
   if (!data.name && !data.email)
     return {
@@ -21,14 +21,8 @@ exports.handler = async ({ body }) => {
       method: "POST",
     });
 
-    return {
-      statusCode: 201,
-      body: JSON.stringify({}),
-    };
+    res.status(201).end();
   } catch ({ message = "Something went wrong" }) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ message }),
-    };
+    res.status(400).json(err);
   }
 };
