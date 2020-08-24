@@ -1,6 +1,6 @@
 # HeadlessCommerce.org
 
-## What is it?
+[Visit the site](https://headlesscommerce.org/)
 
 We’ve made an easy to browse list of services that can be used to build a headless commerce stack. You can bookmark resources to save for later reference.
 
