@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <Banner>
         We're sponsors of{" "}
         <a
-          href="https://headlesscommercesummit2020.sched.com/"
+          href="https://ti.to/netlify/headless-commerce-summit?source=commercejs"
           className="underline"
           rel="nofollow noopener noreferrer"
           target="_blank"
