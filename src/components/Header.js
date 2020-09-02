@@ -18,7 +18,7 @@ const siteMetadataQuery = graphql`
   }
 `;
 
-const Header = () => {
+const Header = ({ title, description, ctas = [] }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(siteMetadataQuery);
@@ -68,13 +68,29 @@ const Header = () => {
 
       <div className="pt-6 mx-auto max-w-screen-xl px-4 sm:px-6 md:pt-32">
         <div className="text-center">
-          <h2 className="text-2xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
-            Headless Commerce Resources
-          </h2>
-          <p className="mt-3 max-w-md mx-auto text-base text-white opacity-75 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            A community curated list of commerce products, services, podcasts,
-            books, and more. A heads-up for modern store builders.
-          </p>
+          {title && (
+            <h2 className="text-2xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
+              {title}
+            </h2>
+          )}
+          {description && (
+            <p className="mt-3 max-w-md mx-auto text-base text-white opacity-75 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              {description}
+            </p>
+          )}
+
+          {ctas && (
+            <div className="mt-4">
+              {ctas.map((cta, index) => (
+                <div class="rounded-md shadow inline-flex" key={index}>
+                  <Link
+                    {...cta}
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-secondary bg-white focus:outline-none focus:shadow-outline-gray transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </header>

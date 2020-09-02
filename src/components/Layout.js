@@ -1,7 +1,6 @@
 import React from "react";
 
 import Banner from "./Banner";
-import Header from "./Header";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
@@ -19,9 +18,8 @@ export default function Layout({ children }) {
         </a>
         , Sept 3, 2020 &mdash; Come say hello!
       </Banner>
-      <Header />
 
-      <main className="bg-athens-gray py-3 md:py-6">{children}</main>
+      <main className="bg-athens-gray pb-3 md:pb-6">{children}</main>
 
       <Footer />
     </React.Fragment>
