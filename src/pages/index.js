@@ -3,6 +3,7 @@ import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, InfiniteHits } from "react-instantsearch-dom";
 
 import SEO from "../components/SEO";
+import Header from "../components/Header";
 import SearchFilters from "../components/SearchFilters";
 import SearchSummary from "../components/SearchSummary";
 import Hit from "../components/Hit";
@@ -27,6 +28,11 @@ export default function IndexPage() {
   return (
     <React.Fragment>
       <SEO />
+      <Header
+        title="Headless Commerce Resources"
+        description="A community curated list of commerce products, services, podcasts, books, and more. A heads-up for modern store builders."
+        ctas={[{ to: "/about", children: "Learn more" }]}
+      />
 
       <InstantSearch
         searchClient={client}
