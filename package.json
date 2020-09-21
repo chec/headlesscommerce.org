@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "airtable": "0.10.0",
-    "algoliasearch": "4.4.0",
+    "algoliasearch": "4.5.1",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
     "gatsby": "2.24.57",
