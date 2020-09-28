@@ -20,7 +20,7 @@
     "gatsby-plugin-react-svg": "3.0.0",
     "gatsby-source-airtable": "2.1.1",
     "gatsby-source-filesystem": "2.3.30",
-    "isomorphic-fetch": "2.2.1",
+    "isomorphic-fetch": "3.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",
