@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useLayoutState } from "../context/layout";
 import { useBookmarksState } from "../context/bookmarks";
 
-import ActiveLink from "../components/active-link";
+import ActiveLink from "./active-link";
 import * as LogoSVG from "../svg/logo.svg";
 import * as GridSVG from "../svg/grid.svg";
 import * as ListSVG from "../svg/list.svg";
