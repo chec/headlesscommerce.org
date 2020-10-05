@@ -1,28 +1,22 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: ["./src/**/*.js"],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/ui")],
   theme: {
     extend: {
-      colors: {
-        primary: "#17253a",
-        secondary: "#2c7ea1",
-        "pale-sky": "#6b7280",
-        "athens-gray": "#f9fafb",
-        "athens-gray-dark": "#f4f5f7",
-        mirage: "#161e2e",
-      },
       fontFamily: {
-        sans: ["Inter var", ...fontFamily.sans],
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
     },
   },
   variants: {
-    textColor: ["responsive", "hover", "focus", "group-hover"],
-    visibility: ["responsive", "group-hover"],
-  },
-  plugins: [require("@tailwindcss/typography")],
-  experimental: {
-    experimental: "all",
+    translate: ({ after }) => after(["group-hover"], "responsive"),
+    opacity: ({ after }) => after(["group-hover"], "responsive"),
+    scale: ({ after }) => after(["group-hover"], "responsive"),
   },
 };
