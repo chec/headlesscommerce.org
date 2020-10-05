@@ -58,7 +58,11 @@ const GET_AGENCIES = gql`
 
 const GET_ALL_PAGES = gql`
   {
-    pages {
+    pages(
+      where: {
+        slug_not_in: ["mystack", "index", "suggest", "agencies", "categories"]
+      }
+    ) {
       slug
     }
   }

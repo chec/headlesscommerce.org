@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 
 import Navigation from "./navigation";
 
-import CommerceJsSVG from "../svg/commercejs.svg";
+import * as CommerceJsSVG from "../svg/commercejs.svg";
 
 type LayoutProps = {
   children: any;

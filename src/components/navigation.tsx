@@ -4,11 +4,11 @@ import { useLayoutState } from "../context/layout";
 import { useBookmarksState } from "../context/bookmarks";
 
 import ActiveLink from "../components/active-link";
-import LogoSVG from "../svg/logo.svg";
-import GridSVG from "../svg/grid.svg";
-import ListSVG from "../svg/list.svg";
-import CompassSVG from "../svg/compass.svg";
-import BuildingSVG from "../svg/building.svg";
+import * as LogoSVG from "../svg/logo.svg";
+import * as GridSVG from "../svg/grid.svg";
+import * as ListSVG from "../svg/list.svg";
+import * as CompassSVG from "../svg/compass.svg";
+import * as BuildingSVG from "../svg/building.svg";
 
 const Navigation = () => {
   const { isGrid } = useLayoutState();

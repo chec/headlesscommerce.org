@@ -4,7 +4,7 @@ import cc from "classcat";
 import { useLayoutState } from "../../context/layout";
 import { useBookmarksState } from "../../context/bookmarks";
 
-import BookmarkSVG from "../../svg/bookmark.svg";
+import * as BookmarkSVG from "../../svg/bookmark.svg";
 
 import Actions from "../actions";
 

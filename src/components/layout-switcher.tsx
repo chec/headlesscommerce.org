@@ -3,8 +3,8 @@ import cc from "classcat";
 
 import { useLayoutState, useLayoutDispatch } from "../context/layout";
 
-import GridSVG from "../svg/grid.svg";
-import ListSVG from "../svg/list.svg";
+import * as GridSVG from "../svg/grid.svg";
+import * as ListSVG from "../svg/list.svg";
 
 const buttonClass =
   "appearance-none focus:outline-none border-none p-2 flex items-center justify-center transition-none";

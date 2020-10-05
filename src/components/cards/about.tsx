@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import CommerceJsSVG from "../../svg/commercejs.svg";
+import * as CommerceJsSVG from "../../svg/commercejs.svg";
 
 const AboutCard = () => {
   return (
