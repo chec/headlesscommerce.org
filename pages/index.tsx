@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
       page,
       services: shuffle([
         ...services,
-        { __typename: "Newsletter" },
+        // { __typename: "Newsletter" },
         { __typename: "About" },
       ]),
       categories: categories.map(({ id, name }) => ({

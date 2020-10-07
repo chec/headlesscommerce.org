@@ -24,34 +24,42 @@ const NewsletterCard = () => {
           Subscribe to our headless commerce digest newsletter
         </h3>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="pt-6">
-          <div className="pb-3">
-            <input
-              className="appearance-none bg-gray-100 rounded w-full p-3 text-gray-900 leading-tight focus:outline-none text-center"
-              name="email"
-              type="email"
-              placeholder="Your email address"
-              ref={register({
-                required: true,
-                pattern: {
-                  value: /^\S+@\S+$/i,
-                  message: "Field is invalid",
-                },
-              })}
-              required
-            />
-          </div>
+        {sendDataSubmitted ? (
+          <p className="text-gray-500 text-lg">Subscribed!</p>
+        ) : (
+          <form onSubmit={handleSubmit(onSubmit)} className="pt-6">
+            <div className="pb-3">
+              <input
+                className="appearance-none bg-gray-100 rounded w-full p-3 text-gray-900 leading-tight focus:outline-none text-center"
+                name="email"
+                type="email"
+                placeholder="Your email address"
+                ref={register({
+                  required: true,
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Field is invalid",
+                  },
+                })}
+                required
+              />
+            </div>
 
-          <div>
-            <button
-              type="submit"
-              className="bg-gradient-to-r from-red-600 to-indigo-600 focus:outline-none uppercase text-sm px-3 py-3 font-semibold text-white rounded block w-full"
-              disabled={isSubmitting}
-            >
-              Sign me up
-            </button>
-          </div>
-        </form>
+            {sendDataError && (
+              <div className="text-red-700 text-sm my-3">{sendDataError}</div>
+            )}
+
+            <div>
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-red-600 to-indigo-600 focus:outline-none uppercase text-sm px-3 py-3 font-semibold text-white rounded block w-full"
+                disabled={isSubmitting}
+              >
+                Sign me up
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </article>
   );

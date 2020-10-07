@@ -1,7 +1,8 @@
-import { Fragment } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { DefaultSeo } from "next-seo";
 
+import SEO from "../next-seo.config";
 import { LayoutProvider } from "../context/layout";
 import { BookmarksProvider } from "../context/bookmarks";
 
@@ -9,7 +10,9 @@ import "../styles/index.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Fragment>
+    <>
+      <DefaultSeo {...SEO} />
+
       <Head>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
@@ -19,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </BookmarksProvider>
       </LayoutProvider>
-    </Fragment>
+    </>
   );
 }
 
