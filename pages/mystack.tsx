@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export const MyStackPage = ({ page: { subTitle, ...page } }) => {
+export const MyStackPage = ({ page }) => {
   const { bookmarks } = useBookmarksState();
   const categories = bookmarks.reduce((all = [], { category }) => {
     if (!category) return;
@@ -43,12 +43,12 @@ export const MyStackPage = ({ page: { subTitle, ...page } }) => {
 
   return (
     <Layout
+      {...page}
       subTitle={
         hasResults
-          ? subTitle
+          ? page.subTitle
           : "When add services to your stack, they'll appear here!"
       }
-      {...page}
     >
       {hasResults && (
         <div className="max-w-5xl mx-auto">
