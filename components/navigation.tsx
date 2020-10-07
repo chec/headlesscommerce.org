@@ -8,7 +8,7 @@ import * as LogoSVG from "../svg/logo.svg";
 import * as GridSVG from "../svg/grid.svg";
 import * as ListSVG from "../svg/list.svg";
 import * as CompassSVG from "../svg/compass.svg";
-import * as BuildingSVG from "../svg/building.svg";
+// import * as BuildingSVG from "../svg/building.svg";
 
 const Navigation = () => {
   const { isGrid } = useLayoutState();
@@ -18,38 +18,38 @@ const Navigation = () => {
 
   return (
     <nav className="max-w-5xl mx-auto">
-      <div className="flex flex-wrap items-center -mx-6 text-gray-500">
-        <div className="px-6 flex items-center md:flex-1">
+      <div className="flex flex-wrap items-center text-gray-500">
+        <div className="px-6 flex items-center justify-between md:justify-start w-full md:flex-1">
           <Link href="/">
             <a>
               <LogoSVG className="h-6 md:h-8 fill-current text-black opacity-75 hover:opacity-100" />
             </a>
           </Link>
 
-          <nav className="flex items-center md:border-l md:border-gray-200 md:pl-6 md:ml-6">
+          <nav className="flex items-center md:border-l md:border-gray-200 md:pl-6 md:ml-6 space-x-3">
             <ActiveLink href="/" activeClassName="text-black">
-              <a className="mr-1.5 px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
+              <a className="px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
                 <BrowseSVG className="w-5 h-5 fill-current mr-1.5" />
                 <span>Discover</span>
               </a>
             </ActiveLink>
 
             <ActiveLink href="/categories" activeClassName="text-black">
-              <a className="mr-1.5 px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
+              <a className="px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
                 <CompassSVG className="w-5 h-5 fill-current mr-1.5" />
                 <span>Categories</span>
               </a>
             </ActiveLink>
 
-            <ActiveLink href="/agencies" activeClassName="text-black">
-              <a className="mr-1.5 px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
+            {/* <ActiveLink href="/agencies" activeClassName="text-black">
+              <a className="px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
                 <BuildingSVG className="w-5 h-5 fill-current mr-1.5" />
                 <span>Agencies</span>
               </a>
-            </ActiveLink>
+            </ActiveLink> */}
           </nav>
         </div>
-        <div className="px-6 md:text-right md:flex md:items-center">
+        <div className="hidden md:flex md:items-center md:text-right px-6">
           <ActiveLink href="/mystack" activeClassName="text-black">
             <a className="mr-1.5 px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center flex-shrink-0">
               <div className="relative">

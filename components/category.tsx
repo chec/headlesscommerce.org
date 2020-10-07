@@ -4,7 +4,10 @@ const Category = ({ name, slug, services }) => {
   const noOfServices = services.length;
 
   return (
-    <article className="p-6 bg-white rounded relative shadow group overflow-hidden transition duration-150 ease-in-out">
+    <article
+      key={slug}
+      className="p-6 bg-white rounded relative shadow group overflow-hidden transition duration-150 ease-in-out"
+    >
       <Link href="/categories/[slug]" as={`/categories/${slug}`}>
         <a className="flex items-center justify-between p-2 group transition ease-in-out duration-150">
           <div className="flex-1">

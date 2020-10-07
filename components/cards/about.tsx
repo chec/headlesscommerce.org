@@ -17,13 +17,15 @@ const AboutCard = () => {
             </a>
           </Link>
         </div>
-      </div>
-      <div className="absolute bottom-0 inset-x-0 w-full pb-6 text-center">
-        <Link href="/about">
-          <a rel="nofollow noopener noreferrer" target="_blank">
+        <div className="pt-6 text-center">
+          <a
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            href="https://commercejs.com"
+          >
             <CommerceJsSVG className="h-4 inline-block" />
           </a>
-        </Link>
+        </div>
       </div>
     </article>
   );

@@ -15,10 +15,10 @@ type LayoutProps = {
 const Layout = ({ children, title, subTitle, description }: LayoutProps) => {
   return (
     <>
-      <header className="pt-8">
+      <header className="pt-6 md:pt-8">
         <Navigation />
 
-        <div className="p-6 md:py-32 bg-white shadow-sm border-b border-gray-200">
+        <div className="p-6 py-12 md:py-32 lg:py-36 bg-white shadow-sm border-b border-gray-200">
           <div className="max-w-2xl mx-auto text-center">
             {title && (
               <h2 className="text-2xl sm:text-5xl md:text-6xl tracking-tight font-extrabold leading-tight text-transparent bg-gradient-to-r from-red-600 via-indigo-600 to-purple-700 bg-clip-text">
