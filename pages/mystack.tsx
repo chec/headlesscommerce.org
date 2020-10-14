@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GetStaticProps } from "next";
 import Select from "react-select";
+import { NextSeo } from "next-seo";
 
 import { getPageBySlug } from "../lib/queries";
 import { useBookmarksState } from "../context/bookmarks";
@@ -50,6 +51,8 @@ export const MyStackPage = ({ page }) => {
           : "When add services to your stack, they'll appear here!"
       }
     >
+      <NextSeo title="My Stack" />
+
       {hasResults && (
         <div className="max-w-5xl mx-auto">
           <div className="py-8 border-b border-gray-200 flex items-center justify-between z-30 relative">

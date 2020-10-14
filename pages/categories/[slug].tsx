@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
+import { NextSeo } from "next-seo";
 
 import { graphcmsClient, gql } from "../../lib/graphcms";
 
@@ -69,6 +70,8 @@ export default function IndexPage({ category, services }) {
 
   return (
     <Layout {...page} description={description?.markdown}>
+      <NextSeo title={name} />
+
       <div className="max-w-5xl mx-auto">
         <div className="py-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map(Service)}

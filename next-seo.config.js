@@ -3,6 +3,7 @@ const description =
   "A community curated list of commerce products, services, podcasts, books and more. A heads-up for modern store builders.";
 
 export default {
+  titleTemplate: `%s | ${title}`,
   title,
   description,
   openGraph: {

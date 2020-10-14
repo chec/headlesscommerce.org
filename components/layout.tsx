@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import Markdown from "react-markdown";
 
 import Navigation from "./navigation";
@@ -10,9 +10,16 @@ type LayoutProps = {
   title: string;
   subTitle?: string;
   description?: string;
+  cta?: LinkProps;
 };
 
-const Layout = ({ children, title, subTitle, description }: LayoutProps) => {
+const Layout = ({
+  children,
+  title,
+  subTitle,
+  description,
+  cta,
+}: LayoutProps) => {
   return (
     <>
       <header className="pt-6 md:pt-8">
@@ -35,6 +42,7 @@ const Layout = ({ children, title, subTitle, description }: LayoutProps) => {
                 <Markdown children={description} />
               </div>
             )}
+            {cta && <div className="pt-6 md:pt-10">{cta}</div>}
           </div>
         </div>
       </header>

@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import { NextSeo } from "next-seo";
 
 import { getPageBySlug } from "../../lib/queries";
 import { gql, graphcmsClient } from "../../lib/graphcms";
@@ -37,6 +38,8 @@ export const getStaticProps: GetStaticProps = async () => {
 const MyStackPage = ({ page, categories }) => {
   return (
     <Layout {...page}>
+      <NextSeo title="Browse by category" />
+
       <div className="max-w-5xl mx-auto">
         <Categories items={categories} />
       </div>

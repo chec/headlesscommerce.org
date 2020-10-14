@@ -2,6 +2,8 @@ import { useState } from "react";
 import { GetStaticProps } from "next";
 import Select from "react-select";
 import shuffle from "lodash.shuffle";
+import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 import { getPageBySlug, getCategories, getAllServices } from "../lib/queries";
 
@@ -45,7 +47,18 @@ const IndexPage = ({ page, services, categories }) => {
   });
 
   return (
-    <Layout {...page}>
+    <Layout
+      {...page}
+      cta={
+        <Link href="/about">
+          <a className="relative inline-flex items-center text-center px-3 py-2 rounded-md border border-gray-200 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-black focus:z-10 focus:outline-none active:bg-gray-100 active:text-black transition ease-in-out duration-150">
+            Learn more
+          </a>
+        </Link>
+      }
+    >
+      <NextSeo title="Build your next commerce stack" />
+
       <div className="md:sticky md:top-0 bg-gray-50 py-8 z-50">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between z-30">
