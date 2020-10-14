@@ -14,7 +14,7 @@ export default {
     description,
     images: [
       {
-        url: "https://headlesscommerce.org/headless-commerce.org",
+        url: "https://headlesscommerce.org/headless-commerce.png",
       },
     ],
   },
