@@ -8,7 +8,7 @@ import * as LogoSVG from "../svg/logo.svg";
 import * as GridSVG from "../svg/grid.svg";
 import * as ListSVG from "../svg/list.svg";
 import * as CompassSVG from "../svg/compass.svg";
-// import * as BuildingSVG from "../svg/building.svg";
+import * as BuildingSVG from "../svg/building.svg";
 
 const Navigation = () => {
   const { isGrid } = useLayoutState();
@@ -28,7 +28,7 @@ const Navigation = () => {
 
           <nav className="flex items-center md:border-l md:border-gray-200 md:pl-6 md:ml-6 space-x-3">
             <ActiveLink href="/" activeClassName="text-black">
-              <a className="px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
+              <a className="px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium hidden md:flex items-center">
                 <BrowseSVG className="w-5 h-5 fill-current mr-1.5" />
                 <span>Discover</span>
               </a>
@@ -41,12 +41,12 @@ const Navigation = () => {
               </a>
             </ActiveLink>
 
-            {/* <ActiveLink href="/agencies" activeClassName="text-black">
+            <ActiveLink href="/agencies" activeClassName="text-black">
               <a className="px-3 py-1.5 text-sm opacity-75 hover:text-black font-medium flex items-center">
                 <BuildingSVG className="w-5 h-5 fill-current mr-1.5" />
                 <span>Agencies</span>
               </a>
-            </ActiveLink> */}
+            </ActiveLink>
           </nav>
         </div>
         <div className="hidden md:flex md:items-center md:text-right px-6">

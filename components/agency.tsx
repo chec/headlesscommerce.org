@@ -6,7 +6,7 @@ import { useLayoutState } from "../context/layout";
 const Service = (props) => {
   if (!props.id) return null;
 
-  const { id, logo, name, subTitle, locations } = props;
+  const { id, logo, name, subTitle, locations, url } = props;
 
   const { isGrid, isList } = useLayoutState();
 
@@ -24,26 +24,11 @@ const Service = (props) => {
       <div
         className={cc([
           {
-            flex: isList,
+            "flex flex-col md:flex-row md:space-x-6": isList,
           },
         ])}
       >
-        <span className="absolute top-0 right-0 mt-4 mr-4 z-20 flex items-center justify-end">
-          {/* {category?.name && (
-            <Link href="/categories/[slug]" as={`/categories/${category.slug}`}>
-              <a
-                className={cc([
-                  "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-gray-100 border border-transparent text-gray-400 transition duration-100 ease-in-out",
-                  {
-                    "group-hover:bg-transparent group-hover:border-white group-hover:text-white": isGrid,
-                  },
-                ])}
-              >
-                {category.name}
-              </a>
-            </Link>
-          )} */}
-        </span>
+        <span className="absolute top-0 right-0 mt-4 mr-4 z-20 flex items-center justify-end"></span>
 
         <div className="mb-4">
           {logo ? (
@@ -62,11 +47,11 @@ const Service = (props) => {
             </h3>
             <p className="mt-1 text-gray-400 text-sm leading-6">{subTitle}</p>
             {locations && (
-              <div className="pt-2">
+              <div className="pt-2 space-x-1">
                 {locations.map((loc, index) => (
                   <span
                     key={index}
-                    className="inline-flex items-center px-2.5 mx-1 my-1.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-gray-100 border border-transparent text-gray-400 transition duration-100 ease-in-out"
+                    className="inline-flex items-center px-2.5 my-1.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-gray-100 border border-transparent text-gray-400 transition duration-100 ease-in-out"
                   >
                     {loc}
                   </span>
@@ -82,7 +67,19 @@ const Service = (props) => {
                 },
               ])}
             >
-              Visit
+              <a
+                href={url}
+                rel="nofollow noopener noreferrer"
+                target="_blank"
+                className={cc([
+                  "relative inline-flex items-center px-3 py-2 rounded-md border border-gray-200 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-black focus:z-10 focus:outline-none active:bg-gray-100 active:text-black transition ease-in-out duration-150",
+                  {
+                    "shadow-lg": isGrid,
+                  },
+                ])}
+              >
+                Visit
+              </a>
             </div>
           </div>
 

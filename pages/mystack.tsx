@@ -51,7 +51,7 @@ export const MyStackPage = ({ page }) => {
           : "When add services to your stack, they'll appear here!"
       }
     >
-      <NextSeo title="My Stack" />
+      <NextSeo title={page.title} />
 
       {hasResults && (
         <div className="max-w-5xl mx-auto">

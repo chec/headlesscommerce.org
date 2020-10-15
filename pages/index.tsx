@@ -57,7 +57,7 @@ const IndexPage = ({ page, services, categories }) => {
         </Link>
       }
     >
-      <NextSeo title="Build your next commerce stack" />
+      <NextSeo title={page.title} />
 
       <div className="md:sticky md:top-0 bg-gray-50 py-8 z-50">
         <div className="max-w-5xl mx-auto">
