@@ -1,6 +1,8 @@
 import Link from "next/link";
 import cc from "classcat";
 
+import * as gtag from "../lib/ga";
+
 import { useLayoutState } from "../context/layout";
 import { useBookmarksState, useBookmarksDispatch } from "../context/bookmarks";
 
@@ -50,6 +52,14 @@ export default function Actions(props) {
       </button>
       <Link href={url}>
         <a
+          onClick={() =>
+            gtag.event({
+              category: "Outbound Link",
+              action: "click",
+              label: externalUrl,
+              value: externalUrl,
+            })
+          }
           rel="nofollow noopener noreferrer"
           target="_blank"
           className="-ml-px relative inline-flex items-center px-3 py-2 rounded-r-md border border-gray-200 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-black focus:z-10 focus:outline-none active:bg-gray-100 active:text-black transition ease-in-out duration-150"
