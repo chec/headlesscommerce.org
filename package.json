@@ -28,7 +28,7 @@
     "airtable": "0.10.0",
     "babel-plugin-inline-react-svg": "1.1.1",
     "postcss-preset-env": "6.7.0",
-    "prettier": "2.1.1",
+    "prettier": "2.1.2",
     "tailwindcss": "1.8.5",
     "typescript": "4.0.2"
   }
