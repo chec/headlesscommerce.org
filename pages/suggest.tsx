@@ -35,7 +35,16 @@ const SuggestPage = ({ page }) => {
   return (
     <Layout {...page}>
       <div className="max-w-5xl mx-auto py-6 md:py-12 lg:py-24">
-        {sendDataSubmitted ? null : (
+        {sendDataError && (
+          <p className="text-center text-xl text-red-500">
+            Oops! Something went wrong. Please try again.
+          </p>
+        )}
+        {sendDataSubmitted ? (
+          <p className="text-center text-xl text-indigo-500">
+            Thank you for your suggestion.
+          </p>
+        ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
             <div className="w-full pb-6">
               <label htmlFor="url" className="sr-only">

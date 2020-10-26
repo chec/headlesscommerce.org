@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@slack/webhook": "5.0.3",
     "classcat": "4.1.0",
     "graphql": "15.3.0",
     "graphql-request": "3.2.0",

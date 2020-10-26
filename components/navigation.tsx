@@ -70,7 +70,7 @@ const Navigation = () => {
             </a>
           </ActiveLink>
 
-          {/* <ActiveLink href="/suggest" activeClassName="text-black">
+          <ActiveLink href="/suggest" activeClassName="text-black">
             <a className="px-3 py-1.5 text-sm rounded bg-gray-100 opacity-75 hover:text-black font-medium inline-flex items-center">
               <svg
                 className="w-5 h-5 fill-current mr-1.5"
@@ -82,7 +82,7 @@ const Navigation = () => {
               </svg>
               <span>Suggest</span>
             </a>
-          </ActiveLink> */}
+          </ActiveLink>
         </div>
       </div>
     </nav>
