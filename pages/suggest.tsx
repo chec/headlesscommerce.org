@@ -48,7 +48,7 @@ const SuggestPage = ({ page }) => {
           <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg mx-auto">
             <div className="w-full pb-6">
               <label htmlFor="url" className="sr-only">
-                Site URL
+                Resource / Agency URL
               </label>
 
               <input
@@ -56,7 +56,7 @@ const SuggestPage = ({ page }) => {
                 name="url"
                 id="url"
                 className="appearance-none border border-gray-200 focus:border-gray-500 text-lg focus:outline-none bg-white rounded px-3 py-2 w-full"
-                placeholder="Site URL"
+                placeholder="Resource / Agency URL"
                 ref={register({
                   required: "You must provide a URL",
                 })}
