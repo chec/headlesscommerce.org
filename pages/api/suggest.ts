@@ -1,12 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { IncomingWebhook } from "@slack/webhook";
 
-type Data = {
-  url: string;
-  email: string;
-};
-
-module.exports = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { url, email } = JSON.parse(req.body);
 
