@@ -19,7 +19,7 @@
     "react-dom": "16.14.0",
     "react-hook-form": "6.12.1",
     "react-markdown": "5.0.3",
-    "react-select": "3.1.0"
+    "react-select": "3.1.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.3.1",
