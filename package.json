@@ -1,7 +1,7 @@
 {
   "name": "headlesscommerce.org",
   "private": true,
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "scripts": {
     "dev": "next",
     "build": "next build",
