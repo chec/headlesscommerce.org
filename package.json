@@ -24,7 +24,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "0.3.1",
     "@tailwindcss/ui": "0.7.2",
-    "@types/node": "14.14.19",
+    "@types/node": "14.14.20",
     "@types/react": "17.0.0",
     "airtable": "0.10.1",
     "babel-plugin-inline-react-svg": "1.1.2",
