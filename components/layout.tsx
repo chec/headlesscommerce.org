@@ -6,7 +6,7 @@ import Navigation from "./navigation";
 import * as CommerceJsSVG from "../svg/commercejs.svg";
 
 type LayoutProps = {
-  children: any;
+  children?: any;
   title: string;
   subTitle?: string;
   description?: string;

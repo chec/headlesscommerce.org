@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
+import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
 import { graphcmsClient, gql } from "../../lib/graphcms";
@@ -43,25 +44,41 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const {
-    category: { services, ...category },
-  } = await graphcmsClient.request(GetCategory, { slug: params.slug });
+  try {
+    const {
+      category: { services, ...category },
+    } = await graphcmsClient.request(GetCategory, { slug: params.slug });
 
-  return {
-    props: {
-      category,
-      services,
-    },
-    revalidate: 5,
-  };
+    return {
+      props: {
+        category,
+        services,
+      },
+      revalidate: 5,
+    };
+  } catch (err) {
+    return {
+      props: {
+        category: null,
+        services: [],
+      },
+    };
+  }
 };
 
-export default function IndexPage({ category, services }) {
+const CategoryPage = ({ category, services }) => {
+  const router = useRouter();
+  const { isFallback } = router.query;
+
+  if (isFallback) return <Layout title="Fetching page" />;
+
+  if (!isFallback && !category) return <Layout title="Not found" />;
+
   const { name, description } = category;
 
   const page = {
@@ -79,4 +96,6 @@ export default function IndexPage({ category, services }) {
       </div>
     </Layout>
   );
-}
+};
+
+export default CategoryPage;

@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
+import { useRouter } from "next/router";
 import Markdown from "react-markdown";
 
 import { getPageBySlug, getAllPages } from "../lib/queries";
@@ -24,11 +25,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
 export const PageTemplate = ({ page }) => {
+  const router = useRouter();
+  const { isFallback } = router.query;
+
+  if (isFallback) return <Layout title="Fetching page" />;
+
+  if (!isFallback && !page) return <Layout title="Not found" />;
+
   return (
     <Layout {...page}>
       <div className="max-w-5xl mx-auto prose md:prose-lg py-6 md:py-12 lg:py-24">
