@@ -53,14 +53,23 @@ const Layout = ({
         <div className="max-w-5xl px-6 mx-auto text-center">
           <p className="text-gray-400 text-sm inline-flex items-center mb-2">
             <span className="mr-2">Maintained by</span>
-            <Link href="https://commercejs.com">
-              <a
-                className="text-gray-400 hover:text-black"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-              >
-                <CommerceJsSVG className="h-5 inline-block" />
-              </a>
+            <a
+              href="https://commercejs.com"
+              className="text-gray-400 hover:text-black"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+            >
+              <CommerceJsSVG className="h-5 inline-block" />
+            </a>
+            <span className="mx-2">and</span>
+            <a
+              href="https://twitter.com/notrab"
+              className="text-gray-400 hover:text-black"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+            >
+              @notrab
+            </a>
             </Link>
           </p>
         </div>
