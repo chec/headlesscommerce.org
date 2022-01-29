@@ -70,7 +70,6 @@ const Layout = ({
             >
               @notrab
             </a>
-            </Link>
           </p>
         </div>
       </footer>
