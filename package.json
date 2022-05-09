@@ -25,7 +25,7 @@
     "@tailwindcss/typography": "0.4.1",
     "@tailwindcss/ui": "0.7.2",
     "@types/node": "16.11.33",
-    "@types/react": "17.0.44",
+    "@types/react": "17.0.45",
     "airtable": "0.11.3",
     "babel-plugin-inline-react-svg": "2.0.1",
     "postcss-preset-env": "6.7.1",
