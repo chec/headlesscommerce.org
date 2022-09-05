@@ -10,7 +10,7 @@
   "dependencies": {
     "@slack/webhook": "6.1.0",
     "classcat": "5.0.4",
-    "graphql": "16.5.0",
+    "graphql": "16.6.0",
     "graphql-request": "3.7.0",
     "lodash.shuffle": "4.2.0",
     "next": "10.1.3",
